@@ -6,15 +6,17 @@ const showRectangle2 = document.getElementById("rectangle2")
 
 const passwordEl = document.getElementById("password1")
 
+ let passwordLength = 12
 
 passwordEl.addEventListener("click", function() {
+    for (let i = 0; i < passwordLength; i++){
 
     const random1 = Math.floor(Math.random() * characters.length)
     const random2 = Math.floor(Math.random() * characters.length) 
-
     
-    showRectangle.textContent  = `${[characters[random1]]}` 
-    showRectangle2.textContent = `${[characters[random2]]}` 
-    
+     
+    showRectangle.textContent  = `${[characters[random1] + random1 + characters[random1] + random2 + characters[random2]]}` 
+    showRectangle2.textContent = `${[characters[random2] + random2 + characters[random2] + random1 + characters[random1]]}` 
+    }
 }) 
 
